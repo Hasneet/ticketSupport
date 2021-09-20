@@ -1,0 +1,359 @@
+html,
+body,
+section {
+  height: 100%;
+}
+body {
+  color: #fff;
+  text-align: center;
+  background-color: #3b4465;
+  margin: 0;
+  font-family: Roboto, -apple-system, "Helvetica Neue", "Segoe UI", Arial,
+    sans-serif;
+}
+/* div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.xop-container {
+  display: flex;
+}
+/* div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+.xop-left {
+  background-size: cover;
+  background-position: center;
+  flex: 4;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+}
+
+.xop-right {
+  background-color: brown;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.xop-left h1 {
+  font-size: 6rem;
+}
+.xop-right h1 {
+  font-size: 6rem;
+}
+.xop-button {
+  border-radius: 30px;
+  color: #ffff;
+  background-color: #fcad26;
+  padding: 1.5%;
+  margin: 0 2%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 150px;
+}
+.xop-button:hover {
+  background: #fcc567;
+  color: #fff;
+}
+
+.btn-grey-bg {
+  opacity: 1;
+  display: block;
+  min-width: 120px;
+  margin: 30px auto 10px;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s ease-in;
+  color: #fbfdff;
+  background: grey;
+}
+.input-block {
+  align-items: center;
+  font-size: 1.5rem;
+}
+.input-block input {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #3b4465;
+  background: #eef9fe;
+  border: 1px solid #cddbef;
+  border-radius: 2px;
+  width: 200px;
+}
+
+/* cards start */
+
+div ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  width: 800px;
+  min-height: 50px;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 1);
+  /* transform: scale(1.1); */
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1 {
+  background: radial-gradient(#8a0000, #4a0a00);
+}
+
+.card-2 {
+  background: radial-gradient(#fbc1cc, #fa99b2);
+}
+
+.card-3 {
+  background: radial-gradient(#76b2fe, #b69efe);
+}
+
+.card-4 {
+  background: radial-gradient(#60efbc, #58d5c9);
+}
+
+.card-5 {
+  background: radial-gradient(#f588d8, #c0a3e5);
+}
+
+.msgcard {
+  width: 700px;
+}
+
+.msgcard-right-align {
+  background: radial-gradient(#31a700, #003a07);
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.cards {
+  justify-content: center;
+}
+
+/* cards end */
+#left-section-area {
+  overflow-y: auto;
+  padding-top: 50px;
+  max-height: 650px;
+  /* padding-top: 200px; */
+  /* margin-top: 200px; */
+}
+#right-section-area {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: brown;
+}
+.flex-div-class {
+  display: flex;
+}
+.flex-div-class h3 {
+  flex-basis: 90%;
+}
+
+.flex-div-class button {
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+.flex-div-class button:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+#existing-list-message {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #3b4465;
+  background: #eef9fe;
+  border: 1px solid #cddbef;
+  border-radius: 2px;
+  resize: none;
+}
+#exisiting-btn-submit-id {
+  color: #fbfdff;
+  background: grey;
+  transform: translateX(-30%);
+  opacity: 0;
+  display: block;
+  min-width: 120px;
+  margin: 30px auto 10px;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease-in;
+}

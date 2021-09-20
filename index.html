@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    
+    <!-- to make remaining character functionality work, add these two scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>Ticket Support System</title>    
+</head>
+<body>
+    <section class="forms-section">
+        <h1 class="section-title">Ticket Support</h1>
+        <div class="forms">
+          <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+              New
+              <span class="underline"></span>
+            </button>
+            <form class="form form-login" name="new-form-name">
+              <fieldset>
+                <legend>Please, enter your user id, subject and message to submit ticket.</legend>
+                <div class="input-block">
+                  <label for="new-user-id">User ID</label>
+                  <input id="new-user-id" type="number" min="1" name="new-user-id-name" required>
+                </div>
+                <div class="input-block">
+                    <label for="new-subject">Subject</label>
+                    <input id="new-subject" type="text" maxlength="25" name="new-subject-name" required>
+                    <span id='newRemainingSubject'></span>
+                  </div>
+                <div class="input-block">
+                  <label for="new-message">Message</label>
+                  ​<textarea id="new-message" rows="5" maxlength="250" name="new-message-name" required></textarea>
+                  <span id='newRemainingMessage'></span>
+                </div>
+              </fieldset>
+              <button type="button" class="btn-login" id="btn-submit-id" onclick="onClickSubmit()">Submit</button>
+            </form>
+            
+          </div>
+          <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+              Existing
+              <span class="underline"></span>
+            </button>
+            <form class="form form-signup" name="existing-form-name">
+              <fieldset>
+                <legend>Please, enter your user id to view existing tickets.</legend>
+                <div class="input-block">
+                  <label for="existing-user-id">User ID</label>
+                  <input id="existing-user-id" type="number" min="1" name="existing-user-id-name" required>
+                </div>
+              </fieldset>
+              <button type="button" class="btn-signup open-button" id="btn-continue-id" popup-open="popup-1" href="javascript:void(0)" onclick="openSubmitModel()">Continue</button>              
+            </form>
+            <div class="popup" popup-name="popup-1">
+                <div class="popup-content">
+                <h2 id="existing-tickets-heading">Existing Tickets</h2>
+                <div id="existing-tickets">
+                </div>
+                    <a class="close-button" popup-close="popup-1" href="javascript:void(0)">x</a></div>                
+            </div> 
+          </div>
+        </div>
+        <div id="snackbar">Ticket Generated</div>
+      </section>
+      <script src="script.js"></script>
+</body>
+</html>

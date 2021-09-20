@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="agentStyle.css" rel="stylesheet" />
+
+    <!-- to make remaining character functionality work, add these two scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Ticket Support System - Agent Panel</title>
+  </head>
+  <body>
+    <section class="xop-container">
+      <div class="xop-left" id="left-section">
+        <h2 style="font-size: xx-large; margin: 0" id="header-id">
+          Unassigned Tickets
+        </h2>
+        <h4 id="sub-header-id">Click to assign</h4>
+        <div id="left-section-area"></div>
+      </div>
+      <div class="xop-right">
+        <div id="right-section-area">
+          <div class="input-block">
+            <label for="agent-id">Agent ID</label>
+            <input
+              id="agent-id"
+              type="number"
+              min="1"
+              name="agent-id-name"
+              placeholder="Enter to search tickets"
+              required
+            />
+          </div>
+
+          <button
+            class="btn-grey-bg"
+            id="btn-unassigned-id"
+            onclick="onClickUnassigned()"
+          >
+            Get Unassigned Tickets
+          </button>
+          <button
+            class="btn-grey-bg"
+            id="btn-mytickets-id"
+            onclick="onClickMyTickets()"
+          >
+            My Tickets
+          </button>
+        </div>
+      </div>
+      <div id="snackbar">Ticket Assigned</div>
+    </section>
+    <script src="agentScript.js"></script>
+  </body>
+</html>
